@@ -1,14 +1,6 @@
 # Amazon Fine Food Reviews — Sentiment Classifier (RNN / LSTM / GRU / Transformer)
 
-Text classification project built the same way as the reference
-[Naukari_LSTM_RNN_GRU_TRANSFORMER_Project](https://github.com/rs472m-ops/Naukari_LSTM_RNN_GRU_TRANSFORMER_Project),
-but trained on a different dataset: **Amazon Fine Food Reviews**
-(568k reviews, `Reviews.csv`) instead of Naukri job postings.
-
-Instead of predicting a job's *Functional Area* from its title + key
-skills, this project predicts a review's **Sentiment** (Negative /
-Neutral / Positive) from its summary + review text, using five models
-trained on the same cleaned input:
+Text classification project on the **Amazon Fine Food Reviews** dataset (568k reviews, `Reviews.csv`). It predicts a review's **Sentiment** (Negative / Neutral / Positive) from its summary + review text, using five models trained on the same cleaned input:
 
 | Model | File |
 |---|---|
