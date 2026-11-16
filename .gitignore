@@ -1,0 +1,16 @@
+# Raw dataset — too large for a normal git push (Reviews.csv is ~300MB,
+# database.sqlite ~370MB). Keep them local; see data/README.md.
+data/Reviews.csv
+data/database.sqlite
+data/hashes.txt
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# OS/editor
+.DS_Store
+.vscode/
