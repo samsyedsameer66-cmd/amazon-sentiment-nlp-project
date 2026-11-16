@@ -1,7 +1,7 @@
 """
 Amazon Fine Food Reviews — Sentiment Classifier
 Trains 5 models on the SAME cleaned text input and exports artifacts
-in the same style as the reference Naukri project:
+exports artifacts:
 
     Logistic Regression (TF-IDF)  -> logreg_model.pkl + tfidf_vectorizer.pkl
     SimpleRNN                     -> simplernn_model.h5
@@ -96,8 +96,7 @@ def load_data(csv_path, sample):
 
 
 # ---------------------------------------------------------------------------
-# Custom Transformer layers (same design as the reference project so the
-# saved .keras file loads the same way in app.py)
+# needed so the saved .keras file can be loaded in app.py
 # ---------------------------------------------------------------------------
 def build_transformer_layers():
     import tensorflow as tf
