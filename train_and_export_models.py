@@ -1,7 +1,6 @@
 """
 Amazon Fine Food Reviews — Sentiment Classifier
-Trains 5 models on the SAME cleaned text input and exports artifacts
-exports artifacts:
+Trains 5 models on the SAME cleaned text input and exports these artifacts:
 
     Logistic Regression (TF-IDF)  -> logreg_model.pkl + tfidf_vectorizer.pkl
     SimpleRNN                     -> simplernn_model.h5
@@ -28,7 +27,7 @@ Usage
     pip install -r requirements.txt
     python train_and_export_models.py --csv data/Reviews.csv --sample 40000 --epochs 4
 
-Drop --sample to train on the full ~568k rows (needs more time/RAM;
+Use --sample 0 to train on the full ~568k rows (needs more time/RAM;
 a GPU runtime such as Google Colab is recommended for that).
 """
 
@@ -96,7 +95,7 @@ def load_data(csv_path, sample):
 
 
 # ---------------------------------------------------------------------------
-# needed so the saved .keras file can be loaded in app.py
+# Custom Transformer layers (needed so the saved .keras file loads in app.py)
 # ---------------------------------------------------------------------------
 def build_transformer_layers():
     import tensorflow as tf
